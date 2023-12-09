@@ -37,6 +37,12 @@ public class Doctor {
 
     public enum Especialidad {
         medicina_interna,
-        medicina_general
+        medicina_general,
+        cardiologia,
+        dermatologia,
+        rehabilitacion_fisica,
+        psicologia,
+        radiologia,
+        odontologia
     }
 }

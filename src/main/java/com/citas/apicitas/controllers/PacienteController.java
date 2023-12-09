@@ -45,7 +45,7 @@ public class PacienteController {
         pacienteService.deletePaciente(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
- 
+
     @GetMapping("/{id}/citas")
     public ResponseEntity<Set<Cita>> getCitasByPacienteId(@PathVariable long id) {
         Set<Cita> citas = pacienteService.findCitasByPacienteId(id);
