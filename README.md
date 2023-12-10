@@ -33,7 +33,7 @@ Para la realización de la API, se hizo uso de las siguientes tecnologías:
 Para la creación de la base de datos de la API se empleo el siguiente modelo entidad relación:
 ![modelo entidad relacion eps java!](./src/img/modelER-java-sql.jpeg)
 
-modelo relacional:
+-Modelo relacional:
 ![modelo entidad relacion eps java!](./src/img/modeloRelacional-java-sql.jpg)
 
 
@@ -60,8 +60,8 @@ modelo relacional:
 
 5. Clonar este repositorio 
 ```sh
-git clone https://github.com/johanGo/proyecto-api-rest-unidad6
-cd proyecto-api-rest-unidad6
+git clone https://github.com/johanGo/proyecto-api-rest-springboot
+cd proyecto-api-rest-springboot
 ```
 <br>
 
@@ -88,11 +88,11 @@ Para el API creamos los siguientes Endpoints:
 | Metodo   |        Endpoint           | Descripción |
 | ------   |--------------             | --------    |
 | `get`    | `/pacientes`          | Obtener los datos de todos los pacientes |
-| `get`    | `/pacientes/id`    | Obtener los datos del paciente por ID |
-| `get`    | `/pacientes/id/citas`       |  |
+| `get`    | `/pacientes/{id}`    | Obtener los datos del paciente por ID |
+| `get`    | `/pacientes/{id}/citas`  | Obtener las citas por el id del paciente  |
 | `post`    | `/pacientes` | Crea el registro de un paciente |
-| `put`    | `/pacientes/id`       | Actualizar los datos del paciente |
-| `delete` | `/pacientes/id`       | Eliminar el registro del paciente |
+| `put`    | `/pacientes/{id}`       | Actualizar los datos del paciente |
+| `delete` | `/pacientes/{id}`       | Eliminar el registro del paciente |
 
 <br>
 
@@ -101,8 +101,8 @@ Para el API creamos los siguientes Endpoints:
 | ------   |--------------             | --------    |
 | `get`    | `/doctores`          | Obtener los datos de todos los doctores |
 | `get`    | `/doctores/{id}`    | Obtener los datos del doctor por ID |
-| `get`    | `/doctores/especialidad/{especialidad}`       |  |
-| `get`    | `/doctores/{id}/citas` |  |
+| `get`    | `/doctores/especialidad/{especialidad}`| Obtener doctores por especialidad |
+| `get`    | `/doctores/{id}/citas` | Obtener las citas que tiene programada el doctor por id  |
 | `post`    | `/doctores` | Crea el registro de un doctor |
 | `put`    | `/doctores/{id}`       | Actualizar los datos del doctor |
 | `delete` | `/doctores/{id}`       | Eliminar el registro del doctor|
@@ -117,6 +117,72 @@ Para el API creamos los siguientes Endpoints:
 | `post`    | `/citas` | Crea el registro de una cita |
 | `put`    | `/citas`       | Actualizar la cita |
 | `delete` | `/citas`       | Eliminar el registro de una cita|
+
+# 6. Pruebas de la API
+---
+Para cuestion de nuestras pruebas, usamos la extension de Visual Studio Code `Thunder Client`
+A continuación vamos a mostrar las pruebas de cada uno de los métodos
+
+### Pruebas para pacientes
+Obtener todos los pacientes
+![Obtener todos los pacientes!](./src/img/ImgPacientes/get-pacientes.png)<br>
+
+Obtener el paciente por id
+![Obtener el paciente por id!](./src/img/ImgPacientes/get-paciente-id.png)
+
+Obtener todos los pacientes con citas
+![Obtener todos los pacientes con citas!](./src/img/ImgPacientes/get-citas-paciente-id.png)
+
+Crear paciente
+![Crear paciente!](./src/img/ImgPacientes/post-pacientes.png)
+
+Actualizar paciente
+![Actualizar paciente!](./src/img/ImgPacientes/put-paciente.png)
+
+Eliminar paciente
+![Eliminar paciente!](./src/img/ImgPacientes/delete-paciente.png)<br><br>
+
+### Pruebas para doctores
+
+
+
+Obtener todos los doctores
+![Obtener todos los doctores!](./src/img/imgDoctores/getAllDoctores.jpeg)<br>
+
+Obtener el doctor por id
+![Obtener el doctor por id!](./src/img/imgDoctores/getDoctoresByID.jpeg)
+
+Obtener todos los doctores con citas programadas
+![Obtener todos los doctores con citas programadas!](./src/img/imgDoctores/getDoctoresByEspecialidad.jpeg)
+
+Obtener las citas programadas del doctor por id
+![Obtener el doctores con cita programada por id!](./src/img/imgDoctores/getDoctoresByCitas.jpeg)
+
+Crear doctores
+![Crear doctores!](./src/img/imgDoctores/postDoctores.jpeg)
+
+Actualizar doctores
+![Actualizar doctores!](./src/img/imgDoctores/putDoctores.jpeg)
+
+Eliminar doctor
+![Eliminar doctor!](./src/img/imgDoctores/deleteDoctores.jpeg)<br><br>
+
+### Pruebas para citas
+
+Obtener todas las citas
+![Obtener todas las citas!](./src/img/imgCitas/getAllCitas.jpeg)
+
+Obtener la cita por id
+![Obtener la cita por id!](./src/img/imgCitas/getCitasById.jpeg)
+
+Crear citas
+![Crear citas!](./src/img/imgCitas/postCitas.jpeg)
+
+Actualizar cita
+![Actualizar cita!](./src/img/imgCitas/putCitas.jpeg)
+
+Eliminar cita
+![Eliminar cita!](./src/img/imgCitas/deleteCitas.jpeg)
 
 # 7. Desarrolladores
 ---
