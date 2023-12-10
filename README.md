@@ -192,3 +192,6 @@ Este proyecto se desarrolló en colaboración de:
 >:whale2: Jorge Daniel Gómez 
 >:smile_cat: Johan Sebastián Gónzalez 
 ---
+
+original repository : https://github.com/norbeydanilo/api-citas-spring-boot.git
+by: Norbey Danilo Muñoz
